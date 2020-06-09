@@ -12,9 +12,9 @@ function setup() {
 	engine = Engine.create();
 	world = engine.world;
 
-	paper = new Paper(200,200,100);
-		
 	ground = new Ground(400,680,800,40);
+
+	paper = new Paper(200,200,100);
 
 	Engine.run(engine);
 
@@ -45,5 +45,9 @@ function draw() {
   box3.display();
 }
 
-
-
+keyPressed() 
+        if(keyCode === UP_ARROW) {
+          Matter.body.applyForce(paper.body,paper.body.position,{x:85,y:-85});
+        }
+	  
+	
