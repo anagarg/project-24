@@ -1,4 +1,4 @@
-var paper, ground
+var paper, ground;
 const Engine = Matter.Engine;
 const World = Matter.World;
 const Bodies = Matter.Bodies;
@@ -45,9 +45,8 @@ function draw() {
   box3.display();
 }
 
-keyPressed() 
-        if(keyCode === UP_ARROW) {
-          Matter.body.applyForce(paper.body,paper.body.position,{x:85,y:-85});
-        }
-	  
-	
+function keyPressed() { 
+	if (keyCode === UP_ARROW) {
+		 Matter.body.applyForce(paper.body, paper.body.position, {x: 85, y: -85}); 
+	} 
+}
